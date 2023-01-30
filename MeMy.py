@@ -1,22 +1,20 @@
 def count():
     fh = open("poem.txt" , 'r')
+    #Initializing variables
     countMe = 0
     countMy = 0
     rawData = fh.read()
     data = rawData.split()
+    # Iterating over data
     for word in data:
+        # Incrementing counters
         if word.lower() == 'me':
             countMe += 1
         if word.lower() == 'my':
             countMy += 1
-    if countMe < 1:
-        print("There are no 'me' in the file!")
-    else:
-        print("Number of me : ", countMe)
-    if countMy < 1:
-        print("There are no 'my' in the file!")
-    else:
-        print("Number of my : ", countMy)
+    # P
+    print("Number of me : ", countMe)   # If there are me printing them
+    print("Number of my : ", countMy)
         
 
 count()
